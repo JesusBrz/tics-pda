@@ -87,6 +87,5 @@ test:
 #
 production:
   <<: *default
-  database: tics_pda_production
-  username: tics_pda
-  password: <%= ENV["TICS_PDA_DATABASE_PASSWORD"] %>
+  database: tics_pda_test
+  url: <%= ENV['DATABASE_URL'] %>
