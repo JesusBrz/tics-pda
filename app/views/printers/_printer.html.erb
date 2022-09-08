@@ -1,29 +1,29 @@
 <div id="<%= dom_id printer %>">
-  <p class="my-5">
+  <div class="my-5">
     <strong class="block font-medium mb-1">Nombre:</strong>
     <%= printer.name %>
-  </p>
+  </div>
   
-  <p class="my-5">
+  <div class="my-5">
     <strong class="block font-medium mb-1">Modelo:</strong>
     <%= printer.model %>
-  </p>
+  </div>
   
-  <p class="my-5">
+  <div class="my-5">
     <strong class="block font-medium mb-1">Serial:</strong>
     <%= printer.serial %>
-  </p>
+  </div>
   
-  <div class="flex items-stretch w-full" role="group">
-    <p class="my-5">
+  <div class="flex items-stretch w-full my-5" role="group">
+    <div class="flex-1 flex items-center">
       <strong class="block font-medium mb-1">IP:</strong>
       <a href="http://<%= printer.ip %>" target="_blank">Portal</a>
-    </p>
+    </div>
     
-    <p class="my-5">
+    <div class="flex-1 flex items-center">
       <strong class="block font-medium mb-1">Controlador:</strong>
       <a href="<%= printer.driver %>" target="_blank">Descargar</a>
-    </p>
+    </div>
   </div>
 
   <% if action_name != "show" %>
