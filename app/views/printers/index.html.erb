@@ -3,7 +3,10 @@
 <% end %>
 <h1 class="text-center sm:text-left font-bold text-4xl mb-4 md:px-4 lg:px-8">Impresoras</h1>
 <div class="md:px-4 lg:px-8">
-  <%= link_to 'Agregar una nueva impresora', new_printer_path, class: "text-center sm:text-left rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  <%= link_to new_printer_path, class: "flex-1 flex items-center justify-center text-center sm:text-left rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" do %>
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+    <p>Agregar una nueva impresora</p>
+  <% end %>
 </div>
 <div class="grid md:grid-cols-2">
   <%= render @printers %>
