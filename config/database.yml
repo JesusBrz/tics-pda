@@ -25,7 +25,7 @@ development:
   <<: *default
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
-  host: <%= ENV['DATABASE_HOST'] %
+  host: <%= ENV['DATABASE_HOST'] %>
   database: tics_pda_development
 
   # The specified database role being used to connect to postgres.
