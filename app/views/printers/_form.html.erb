@@ -12,7 +12,12 @@
         </svg>
         <span class="sr-only">Warning icon</span>
       </div>
-      <div class="ml-3 text-sm font-normal">Improve password difficulty.</div>
+      <h2><%= pluralize(printer.errors.count, "error") %> prohibited this printer from being saved:</h2>
+      <ul>
+        <% printer.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
       <button type="button"
         class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
         data-dismiss-target="#toast-warning" aria-label="Close">
@@ -24,17 +29,6 @@
         </svg>
       </button>
     </div>
-
-  <!--
-    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(printer.errors.count, "error") %> prohibited this printer from being saved:</h2>
-      <ul>
-        <% printer.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  -->
   <% end %>
 
   <div class="my-5">
