@@ -15,15 +15,15 @@
   </div>
   
   <div class="flex items-stretch w-full my-5" role="group">
-    <div class="flex-1 flex items-center">
+    <p class="flex-1 flex items-center">
       <strong class="block font-medium mb-1">IP:</strong>
       <a href="http://<%= printer.ip %>" target="_blank">Portal</a>
-    </div>
+    </p>
     
-    <div class="flex-1 flex items-center">
+    <p class="flex-1 flex items-center">
       <strong class="block font-medium mb-1">Controlador:</strong>
       <a href="<%= printer.driver %>" target="_blank">Descargar</a>
-    </div>
+    </p>
   </div>
 
   <% if action_name != "show" %>
