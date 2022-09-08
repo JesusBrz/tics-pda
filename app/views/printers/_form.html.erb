@@ -1,7 +1,7 @@
 <%= form_with(model: printer, class: "contents") do |form| %>
   <% if printer.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(printer.errors.count, "error", locale: :es) %> prohibited this printer from being saved:</h2>
+      <h2>Se <%= pluralize(printer.errors.count, "presentó", locale: :es) %> <%= pluralize(printer.errors.count, "error", locale: :es) %> al guardar la impresora:</h2>
       <ul>
         <% printer.errors.each do |error| %>
           <li><%= error.full_message %></li>
