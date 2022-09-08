@@ -1,0 +1,33 @@
+<div id="<%= dom_id printer %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= printer.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Model:</strong>
+    <%= printer.model %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Serial:</strong>
+    <%= printer.serial %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Ip:</strong>
+    <a href="http://<%= printer.ip %>" target="_blank">Portal</a>
+    
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Driver:</strong>
+    <a href="<%= printer.driver %>" target="_blank">Descargar</a>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this printer", printer, class: "rounded-lg py-3 px-5 bg-gray-800 inline-block font-medium" %>
+    <%= link_to 'Edit this printer', edit_printer_path(printer), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
