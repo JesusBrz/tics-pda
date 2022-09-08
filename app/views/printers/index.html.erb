@@ -3,7 +3,7 @@
 <% end %>
 
 <h1 class="font-bold text-4xl mb-4">Impresoras</h1>
-<%= link_to 'New printer', new_printer_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-<div class="grid grid-cols-1 sm:grid-cols-2">
+<%= link_to 'Agregar una nueva impresora', new_printer_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+<div class="grid md:grid-cols-2">
   <%= render @printers %>
 </div>
