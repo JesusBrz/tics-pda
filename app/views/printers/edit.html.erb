@@ -1,14 +1,12 @@
 <div class="content w-11/12 md:w-2/3 lg:w-1/2 pb-5">
     <h1 class="font-bold text-4xl mb-4">Editar Impresora</h1>
     <%= render "form", printer: @printer %>
-    <div class="flex items-stretch w-full rounded-md shadow-sm text-center" role="group">
-        <%= link_to printers_path, type: "button", class: "w-1/4 focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-md ml-2 py-3 px-5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 inline-block" do %>
-            <svg class="mr-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            <p>Cancelar</p>
-        <% end %>
-        <%= link_to @printer, type: "button", class: "w-1/4 focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-md ml-2 py-3 px-5 dark:focus:ring-yellow-900 inline-block" do %>
-            <svg class="mr-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path></svg>
-            <p>Volver</p>
-        <% end %>
-    </div>
+    <%= link_to printers_path, type: "button", class: "flex w-1/4 focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-md ml-2 py-3 px-5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 inline-block" do %>
+        <svg class="mr-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        <p>Cancelar</p>
+    <% end %>
+    <%= link_to @printer, type: "button", class: "flex w-1/4 focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-md ml-2 py-3 px-5 dark:focus:ring-yellow-900 inline-block" do %>
+        <svg class="mr-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path></svg>
+        <p>Volver</p>
+    <% end %>
 </div>
