@@ -9,6 +9,8 @@ const printerCardModel = [...document.querySelectorAll("[data-printer-model]")];
 const printerCardSerial = [...document.querySelectorAll("[data-printer-serial]")];
 const searchInput = document.querySelector("[data-search]");
 
+let printers = []
+
 for (var i = 0; i < printerCardName.length; i++) {
   printers[i] = {
     element: printerCard[i],
