@@ -14,15 +14,10 @@
 
 */
 
-#wrapper {
-  width: 100%;
-  height: 100%
-}
-#wrapper {
-  display: table
-}
-#main {
-  display: table-cell;
-  vertical-align: middle;
-  text-align:center
+.content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
