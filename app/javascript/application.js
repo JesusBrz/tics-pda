@@ -6,34 +6,20 @@ import "flowbite";
 const printerCard = [...document.querySelectorAll("[data-printer-card]")];
 const printerCardName = [...document.querySelectorAll("[data-printer-name]")];
 const printerCardModel = [...document.querySelectorAll("[data-printer-model]")];
-const printerCardSerial = [
-  ...document.querySelectorAll("[data-printer-serial]"),
-];
+const printerCardSerial = [...document.querySelectorAll("[data-printer-serial]")];
 const searchInput = document.querySelector("[data-search]");
 
-let names = [];
-let models = [];
-let serials = [];
-
-let printers = [];
-
 for (var i = 0; i < printerCardName.length; i++) {
-  printerCard[i];
-  names[i] = printerCardName[i].innerHTML;
-  models[i] = printerCardModel[i].innerHTML;
-  serials[i] = printerCardSerial[i].innerHTML;
-
   printers[i] = {
     element: printerCard[i],
-    name: names[i],
-    model: models[i],
-    serial: serials[i],
+    name: printerCardName[i].innerHTML,
+    model: printerCardModel[i].innerHTML,
+    serial: printerCardSerial[i].innerHTML,
   };
 }
 
 searchInput.addEventListener("input", (e) => {
   const value = e.target.value.toLowerCase();
-  console.log(value);
   printers.forEach((printer) => {
     const isVisible =
       printer.name.toLowerCase().includes(value) ||
