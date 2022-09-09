@@ -14,10 +14,15 @@
 
 */
 
-.centered {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+#base {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: table
+}
+#content {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }
