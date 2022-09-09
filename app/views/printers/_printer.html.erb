@@ -1,7 +1,7 @@
 <% if action_name != "show" %>
   <div id="<%= dom_id printer %>" class="block md:px-4 lg:px-8" data-printer-card>
 <% else %>
-  <div id="<%= dom_id printer %>" class="block">
+  <div id="<%= dom_id printer %>">
 <% end %>
   <div class="my-5">
     <h1 class="text-center sm:text-left font-bold text-2xl" data-printer-name><%= printer.name %></h1>
