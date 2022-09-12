@@ -1,6 +1,8 @@
 class PrintersController < ApplicationController
   before_action :set_printer, only: %i[ show edit update destroy ]
 
+  def prueba
+  end
   # GET /printers or /printers.json
   def index
     @printers = Printer.all
