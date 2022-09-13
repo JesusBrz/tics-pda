@@ -19,9 +19,9 @@
 </div>
 <div class="grid md:grid-cols-2">
     <% if action_name != "show" %>
-    <div id="<%= dom_id printer %>" class="block md:px-4 lg:px-8" data-printer-card>
+    <div class="block md:px-4 lg:px-8" data-printer-card>
     <% else %>
-    <div id="<%= dom_id printer %>">
+    <div>
     <% end %>
     <div class="my-4">
         <h1 class="text-center sm:text-left font-bold text-2xl" data-printer-name>nombre</h1>
