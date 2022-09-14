@@ -90,3 +90,4 @@ production:
   database: <%= ENV['PRODUCTION_DB_NAME'] %>
   username: <%= ENV['PRODUCTION_DB_USERNAME'] %>
   password: <%= ENV['PRODUCTION_DB_PASSWORD'] %>
+  socket: "/cloudsql/tics-database:us-east5:tics-pda"
