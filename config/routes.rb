@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   root 'welcome#index'
   get '/index', to: 'welcome#index'
+  get '/prueba', to: 'printers#prueba'
   resources :printers
 end
