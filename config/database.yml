@@ -23,10 +23,10 @@ default: &default
 
 development:
   <<: *default
-  username: <%= ENV['DEVELOPMENT_DATABASE_USERNAME'] %>
-  password: <%= ENV['DEVELOPMENT_DATABASE_PASSWORD'] %>
-  database: <%= ENV['DEVELOPMENT_DATABASE'] %>
-  host: <%= ENV['DEVELOPMENT_DATABASE_HOST'] %>
+  username: <%= ENV['LOCAL_DATABASE_USERNAME'] %>
+  password: <%= ENV['LOCAL_DATABASE_PASSWORD'] %>
+  database: <%= ENV['LOCAL_DATABASE'] %>
+  host: <%= ENV['LOCAL_DATABASE_HOST'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
