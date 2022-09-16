@@ -1,0 +1,18 @@
+databases:
+  - name: Rails DataBase
+    databaseName: ticspda
+    user: aministrador
+
+services:
+  - type: web
+    name: tics-pda
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: postgres://administrador:EkMBhbKjSv9ithLsWRkAV5S9RNuwE8KR@dpg-cci7r21a6gdiindn02l0-a/ticspda
+        fromDatabase:
+          name: Rails DataBase
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
