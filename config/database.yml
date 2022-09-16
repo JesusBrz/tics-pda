@@ -87,4 +87,4 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  url: 'postgres://administrador:EkMBhbKjSv9ithLsWRkAV5S9RNuwE8KR@dpg-cci7r21a6gdiindn02l0-a/ticspda'
