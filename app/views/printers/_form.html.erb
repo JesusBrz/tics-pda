@@ -9,22 +9,26 @@
       </ul>
     </div>
   <% end %>
+  <div class="my-4">
+    <p>Nombre</p>
+    <%= form.text_field :name, class: "block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500", placeholder: "Nombre. Ejemplo (CLC 1er Piso)" %>
+  </div>
   <div class="my-4 grid-flow-row grid-cols-2 gap-4 md:grid">
     <div class="my-4 md:my-0">
       <p>Modelo</p>
-      <%= form.text_field :name, class: "block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500", placeholder: "Nombre. Ejemplo (CLC 1er Piso)" %>
-    </div>
-    <div class="my-4 md:my-0">
-      <p>Serial</p>
       <%= form.text_field :model, class: "block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500", placeholder: "Modelo. Ejemplo (MPC 2503-SPF)" %>
     </div>
     <div class="my-4 md:my-0">
+      <p>Serial</p>
+        <%= form.text_field :serial, class: "block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500", placeholder: "Serial. Ejemplo (AAAAAAAAAAA)" %>
+    </div>
+    <div class="my-4 md:my-0">
       <p>Dirección IP</p>
-      <%= form.text_field :ip, class: "block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500", placeholder: "IP. Ejemplo (000.000.000.000)" %>
+        <%= form.text_field :ip, class: "block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500", placeholder: "IP. Ejemplo (000.000.000.000)" %>
     </div>
     <div class="my-4 md:my-0">
       <p>Controlador</p>
-      <%= form.text_field :driver, class: "block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500", placeholder: "URL (https://...)" %>
+        <%= form.text_field :driver, class: "block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500", placeholder: "URL (https://...)" %>
     </div>
   </div>
   <div class="flex items-stretch w-full rounded-md shadow-sm text-center" role="group">
