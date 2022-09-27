@@ -3,12 +3,10 @@
     <strong class="block font-medium mb-1">Model:</strong>
     <%= driver.model %>
   </p>
-
   <p class="my-5">
     <strong class="block font-medium mb-1">Link:</strong>
     <%= driver.link %>
   </p>
-
   <% if action_name != "show" %>
     <%= link_to "Show this driver", driver, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%= link_to 'Edit this driver', edit_driver_path(driver), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
