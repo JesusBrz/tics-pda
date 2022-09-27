@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_08_011655) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_27_010351) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "printers", force: :cascade do |t|
     t.string "name"
-    t.string "model", null: false
-    t.string "serial", null: false
+    t.string "model"
+    t.string "serial"
     t.string "ip"
     t.string "driver"
     t.datetime "created_at", null: false
