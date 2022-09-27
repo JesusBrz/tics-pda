@@ -11,34 +11,36 @@
   <% end %>
   <div class="my-4">
     <p>Nombre</p>
-    <%= form.text_field :name, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500", placeholder: "Nombre. Ejemplo (CLC 1er Piso)" %>
+    <%= form.text_field :name, class: "block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500", placeholder: "Nombre. Ejemplo (CLC 1er Piso)" %>
   </div>
-  <div class="my-4">
-    <p>Modelo</p>
-    <%= form.text_field :model, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500", placeholder: "Modelo. Ejemplo (MPC 2503-SPF)" %>
-  </div>
-  <div class="my-4">
-    <p>Serial</p>
-    <%= form.text_field :serial, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500", placeholder: "Serial. Ejemplo (AAAAAAAAAAA)" %>
-  </div>
-  <div class="my-4">
-    <p>Dirección IP</p>
-    <%= form.text_field :ip, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500", placeholder: "IP. Ejemplo (000.000.000.000)" %>
-  </div>
-  <div class="my-4">
-    <p>URL Controlador</p>
-    <%= form.text_field :driver, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500", placeholder: "URL (https://...)" %>
+  <div class="my-4 grid-flow-row grid-cols-2 gap-4 md:grid">
+    <div class="my-4 md:my-0">
+      <p>Modelo</p>
+      <%= form.text_field :model, class: "block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500", placeholder: "Modelo. Ejemplo (MPC 2503-SPF)" %>
+    </div>
+    <div class="my-4 md:my-0">
+      <p>Serial</p>
+        <%= form.text_field :serial, class: "block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500", placeholder: "Serial. Ejemplo (AAAAAAAAAAA)" %>
+    </div>
+    <div class="my-4 md:my-0">
+      <p>Dirección IP</p>
+        <%= form.text_field :ip, class: "block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500", placeholder: "IP. Ejemplo (000.000.000.000)" %>
+    </div>
+    <div class="my-4 md:my-0">
+      <p>Controlador</p>
+        <%= form.text_field :driver, class: "block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500", placeholder: "URL (https://...)" %>
+    </div>
   </div>
   <div class="flex items-stretch w-full rounded-md shadow-sm text-center" role="group">
     <%= link_to @printer, type: "button", class: "flex w-1/3 items-center justify-center py-2 px-4 text-white text-sm font-medium rounded-l-md bg-yellow-400 hover:bg-yellow-500 focus:z-10 focus:ring-2 focus:ring-yellow-300 dark:focus:ring-yellow-900" do %>
       <svg class="mr-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path></svg>
       <p>Volver</p>
     <% end %>
-    <%= button_tag(type: "submit", class: "flex inline-flex w-1/3 items-center justify-center py-2 px-4 text-white text-sm font-medium bg-blue-700 hover:bg-blue-800 focus:z-10 focus:ring-2 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900") do %>
+    <%= button_tag(type: "submit", class: "flex w-1/3 items-center justify-center py-2 px-4 text-white text-sm font-medium bg-blue-700 hover:bg-blue-800 focus:z-10 focus:ring-2 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900") do %>
       <svg class="mr-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
       <p>Aceptar</p>
     <% end %>
-    <%= link_to printers_path, type: "button", class: "flex mr-0 w-1/3 items-center justify-center py-2 px-4 text-white text-sm font-medium rounded-r-md bg-red-700 hover:bg-red-800 focus:z-10 focus:ring-2 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" do %>
+    <%= link_to printers_path, type: "button", class: "flex w-1/3 items-center justify-center py-2 px-4 text-white text-sm font-medium rounded-r-md bg-red-700 hover:bg-red-800 focus:z-10 focus:ring-2 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" do %>
       <svg class="mr-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
       <p>Cancelar</p>
     <% end %>

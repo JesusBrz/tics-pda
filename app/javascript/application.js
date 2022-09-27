@@ -1,6 +1,7 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 import "@hotwired/turbo-rails";
 import "controllers";
+import "flowbite";
 
 const printerCard = [...document.querySelectorAll("[data-printer-card]")];
 const printerCardName = [...document.querySelectorAll("[data-printer-name]")];
