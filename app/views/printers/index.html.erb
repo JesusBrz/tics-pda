@@ -1,24 +1,24 @@
 <% if notice.present? %>
-  <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <p class="mb-5 inline-block rounded-lg bg-green-50 py-2 px-3 font-medium text-green-500" id="notice"><%= notice %></p>
 <% end %>
 <div class="mb-4 flex items-center justify-between">
   <%= link_to root_path do %>
-    <svg class="mr-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path></svg>
+    <svg class="mr-2 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path></svg>
   <% end %>
   <h1 class="mx-auto text-center text-4xl font-bold sm:text-left md:mx-0 md:mr-auto">Impresoras</h1>
 </div>
 <div class="grid md:grid-cols-2 md:px-4 lg:px-8">
-  <%= link_to new_printer_path, class: "rounded-t-md md:rounded-r-none md:rounded-l-md flex-1 flex md:mx-0 md:my-2 items-center justify-center text-center sm:text-left py-3 px-5 bg-blue-600 text-white block font-medium" do %>
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+  <%= link_to new_printer_path, class: "flex flex-1 items-center justify-center rounded-t-md bg-blue-600 py-3 px-5 text-center font-medium text-white sm:text-left md:mx-0 md:my-2 md:rounded-r-none md:rounded-l-md" do %>
+    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
     <p>Agregar una nueva impresora</p>
   <% end %>
   <div class="md:mx-0 md:my-2">
-    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
+    <label for="default-search" class="sr-only mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Search</label>
     <div class="relative">
-      <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+        <svg aria-hidden="true" class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
       </div>
-      <input type="search" id="search" class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-b-md md:rounded-l-none md:rounded-r-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Buscar" required="" data-search>
+      <input type="search" id="search" class="block w-full rounded-b-md border border-gray-300 bg-gray-50 p-4 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 md:rounded-l-none md:rounded-r-md" placeholder="Buscar" required="" data-search />
     </div>
   </div>
 </div>
