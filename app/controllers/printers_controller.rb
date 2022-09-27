@@ -5,7 +5,7 @@ class PrintersController < ApplicationController
   end
   # GET /printers or /printers.json
   def index
-    @printers = Printer.order('printers.created_at ASC')
+    @printers = Printer.order('printers.id ASC')
   end
 
   # GET /printers/1 or /printers/1.json
