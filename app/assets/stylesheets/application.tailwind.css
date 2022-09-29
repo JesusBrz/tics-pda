@@ -1,18 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/*
-
-@layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
-  }
-}
-
-*/
 
 .vh-centrado {
   position: absolute;
@@ -20,4 +10,29 @@
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.rainbow {
+  background: linear-gradient(
+    to right,
+    #ff004c,
+    #fe9000,
+    #fff020,
+    #3edf4b,
+    #3363ff,
+    #b102b7
+  );
+  height: 0.25rem;
+}
+
+.blckwht {
+  background: linear-gradient(
+    to right,
+    #000000 0% 10%,
+    #f5f5f5,
+    #000000 45% 55%,
+    #f5f5f5,
+    #000000 90% 95%
+  );
+  height: 0.25rem;
 }
