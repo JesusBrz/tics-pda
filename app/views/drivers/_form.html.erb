@@ -1,6 +1,6 @@
 <%= form_with(model: driver, class: "contents") do |form| %>
   <% if driver.errors.any? %>
-    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+    <div id="error_explanation" class="mt-3 rounded-lg bg-red-50 px-3 py-2 font-medium text-red-500">
       <h2><%= pluralize(driver.errors.count, "error") %> prohibited this driver from being saved:</h2>
       <ul>
         <% driver.errors.each do |error| %>
@@ -9,15 +9,26 @@
       </ul>
     </div>
   <% end %>
-  <div class="my-5">
-    <%= form.label :model %>
-    <%= form.text_field :model, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  <div class="my-4">
+    <p>Modelo</p>
+    <%= form.text_field :driver, class: "block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500", placeholder: "AAAAAAAAAA" %>
   </div>
   <div class="my-5">
-    <%= form.label :link %>
-    <%= form.text_field :link, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <p>URL Controlador</p>
+    <%= form.text_field :driver, class: "block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500", placeholder: "URL (https://...)" %>
   </div>
-  <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  <div class="flex items-stretch w-full rounded-md shadow-sm text-center" role="group">
+    <%= link_to @driver, type: "button", class: "flex w-1/3 items-center justify-center rounded-l-md bg-yellow-400 py-2 px-4 text-sm font-medium text-white hover:bg-yellow-500 focus:z-10 focus:ring-2 focus:ring-yellow-300 dark:focus:ring-yellow-900" do %>
+      <svg class="mr-2 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path></svg>
+      <p>Volver</p>
+    <% end %>
+    <%= button_tag(type: "submit", class: "flex w-1/3 items-center justify-center bg-blue-700 py-2 px-4 text-sm font-medium text-white hover:bg-blue-800 focus:z-10 focus:ring-2 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900") do %>
+      <svg class="mr-2 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+      <p>Aceptar</p>
+    <% end %>
+    <%= link_to drivers_path, type: "button", class: "flex w-1/3 items-center justify-center rounded-r-md bg-red-700 py-2 px-4 text-sm font-medium text-white hover:bg-red-800 focus:z-10 focus:ring-2 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" do %>
+      <svg class="mr-2 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      <p>Cancelar</p>
+    <% end %>
   </div>
 <% end %>

@@ -1,5 +1,5 @@
 <% if notice.present? %>
-  <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <p class="mb-5 inline-block rounded-lg bg-green-50 py-2 px-3 font-medium text-green-500" id="notice"><%= notice %></p>
 <% end %>
 <div class="items-center justify-between md:flex">
   <div class="mb-4 flex items-center justify-between">
@@ -13,6 +13,6 @@
     <p>Agregar un nuevo driver</p>
   <% end %>
 </div>
-<div id="drivers" class="grid md:gap-x-4 lg:gap-x-8 md:grid-cols-2 lg:grid-cols-3">
+<div class="grid md:grid-cols-2 md:gap-x-4 lg:grid-cols-3 lg:gap-x-8">
   <%= render @drivers %>
 </div>
