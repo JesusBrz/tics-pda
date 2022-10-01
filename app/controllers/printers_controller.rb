@@ -27,7 +27,7 @@ class PrintersController < ApplicationController
 
     respond_to do |format|
       if @printer.save
-        format.html { redirect_to printer_url(@printer), notice: "Printer was successfully created." }
+        format.html { redirect_to printer_url(@printer), notice: "Impresora agregada con éxito." }
         format.json { render :show, status: :created, location: @printer }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +40,7 @@ class PrintersController < ApplicationController
   def update
     respond_to do |format|
       if @printer.update(printer_params)
-        format.html { redirect_to printer_url(@printer), notice: "Printer was successfully updated." }
+        format.html { redirect_to printer_url(@printer), notice: "Impresora actualizada con éxito." }
         format.json { render :show, status: :ok, location: @printer }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -54,7 +54,7 @@ class PrintersController < ApplicationController
     @printer.destroy
 
     respond_to do |format|
-      format.html { redirect_to printers_url, notice: "Printer was successfully destroyed." }
+      format.html { redirect_to printers_url, notice: "Impresora eliminada con éxito." }
       format.json { head :no_content }
     end
   end
