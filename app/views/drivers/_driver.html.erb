@@ -4,8 +4,8 @@
     <div id="<%= dom_id driver %>">
     <% end %>
     <div class="my-4 justify-items-end">
-      <h1 class="w-fit text-center text-3xl font-bold sm:text-left" data-printer-name>
-        <%= driver.model %>
+      <h1 class="w-fit text-center text-3xl font-bold sm:text-left" data-printer-name></h1>
+      <%= driver.model %>
       <% if has_color(driver.model) %>
         <div class="rainbow outline outline-1 dark:outline-white outline-black"></div>
       <% else %>
