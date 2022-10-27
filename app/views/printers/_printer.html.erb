@@ -30,7 +30,11 @@
     <div class="mb-5 flex w-full items-stretch rounded-md text-center shadow-sm" role="group">
       <a href="http://<%= printer.ip %>" target="_blank" class="flex w-1/2 items-center justify-center rounded-l-md bg-purple-400 py-2 px-4 text-sm font-medium text-white hover:bg-purple-500 focus:z-10 focus:ring-2 focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
         <svg class="mr-2 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-        <p><%= printer.ip %></p>
+        <% if in_range(printer.ip) %>
+          <p class="text-red-600"><%= printer.ip %></p>
+        <% else %>
+          <p><%= printer.ip %></p>
+        <% end %>
       </a>
       <a href="<%= printer.driver %>" target="_blank" class="flex w-1/2 items-center justify-center rounded-r-md bg-green-700 py-2 px-4 text-sm font-medium text-white hover:bg-green-800 focus:z-10 focus:ring-2 focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-900">
         <svg class="mr-2 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
