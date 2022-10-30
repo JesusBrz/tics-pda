@@ -4,7 +4,12 @@
     <div id="<%= dom_id printer %>">
     <% end %>
     <div class="my-4 justify-items-end">
+    <% if printer.id > 900 %>
+      <h1 class="w-fit text-center text-3xl font-bold sm:text-left outline outline-8 outline-red-300 bg-red-300 dark:bg-red-700 dark:outline-red-700 rounded-sm" data-printer-name>
+    <% else %>
       <h1 class="w-fit text-center text-3xl font-bold sm:text-left" data-printer-name>
+    <% end %>
+      
         <%= printer.name %>
         <% if has_color(printer.driver.model) %>
           <div class="rainbow outline outline-1 dark:outline-white outline-black"></div>
