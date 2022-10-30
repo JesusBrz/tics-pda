@@ -17,7 +17,7 @@ class PrintersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create printer" do
     assert_difference("Printer.count") do
-      post printers_url, params: { printer: { driver: @printer.driver, ip: @printer.ip, model: @printer.model, name: @printer.name, serial: @printer.serial } }
+      post printers_url, params: { printer: { driver_id: @printer.driver_id, ip: @printer.ip, name: @printer.name, serial: @printer.serial } }
     end
 
     assert_redirected_to printer_url(Printer.last)
@@ -34,7 +34,7 @@ class PrintersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update printer" do
-    patch printer_url(@printer), params: { printer: { driver: @printer.driver, ip: @printer.ip, model: @printer.model, name: @printer.name, serial: @printer.serial } }
+    patch printer_url(@printer), params: { printer: { driver_id: @printer.driver_id, ip: @printer.ip, name: @printer.name, serial: @printer.serial } }
     assert_redirected_to printer_url(@printer)
   end
 

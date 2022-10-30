@@ -67,6 +67,6 @@ class PrintersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def printer_params
-      params.require(:printer).permit(:name, :model, :serial, :ip, :driver)
+      params.require(:printer).permit(:name, :serial, :ip, :driver_id)
     end
 end

@@ -14,9 +14,8 @@ class PrintersTest < ApplicationSystemTestCase
     visit printers_url
     click_on "New printer"
 
-    fill_in "Driver", with: @printer.driver
+    fill_in "Driver", with: @printer.driver_id
     fill_in "Ip", with: @printer.ip
-    fill_in "Model", with: @printer.model
     fill_in "Name", with: @printer.name
     fill_in "Serial", with: @printer.serial
     click_on "Create Printer"
@@ -29,9 +28,8 @@ class PrintersTest < ApplicationSystemTestCase
     visit printer_url(@printer)
     click_on "Edit this printer", match: :first
 
-    fill_in "Driver", with: @printer.driver
+    fill_in "Driver", with: @printer.driver_id
     fill_in "Ip", with: @printer.ip
-    fill_in "Model", with: @printer.model
     fill_in "Name", with: @printer.name
     fill_in "Serial", with: @printer.serial
     click_on "Update Printer"

@@ -2,14 +2,12 @@
 
 one:
   name: MyString
-  model: MyString
   serial: MyString
   ip: MyString
-  driver: MyString
+  driver: one
 
 two:
   name: MyString
-  model: MyString
   serial: MyString
   ip: MyString
-  driver: MyString
+  driver: two
