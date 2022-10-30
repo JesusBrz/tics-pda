@@ -1,4 +1,10 @@
-<div class="vh-centrado">
-  <%= link_to "Impresoras", printers_path, class: "w-32 items-center justify-center rounded-md bg-blue-700 py-2 px-4 text-sm font-medium text-white hover:bg-blue-800 focus:z-10 focus:ring-2 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900" %>
-  <%= link_to "Drivers", drivers_path, class: "w-32 items-center justify-center rounded-md bg-blue-700 py-2 px-4 text-sm font-medium text-white hover:bg-blue-800 focus:z-10 focus:ring-2 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900" %>
+<div class="vh-centrado grid w-full items-stretch gap-16 px-16 text-center sm:gap-x-4 md:grid-cols-2 md:px-32 lg:gap-x-8 lg:px-64 xl:px-64" role="group">
+  <%= link_to printers_path, type: "button", class: "w-auto items-center justify-center rounded-md bg-blue-700 py-2 px-4 text-sm font-medium text-white hover:bg-blue-800 focus:z-10 focus:ring-2 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900" do %>
+    <svg class="block m-auto my-2 w-16 md:w-32 h-24 md:h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+    <p class="my-2 text-3xl md:text-2xl lg:text-xl">Impresoras</p>
+  <% end %>
+  <%= link_to drivers_path, type: "button", class: "w-auto items-center justify-center rounded-md bg-blue-700 py-2 px-4 text-sm font-medium text-white hover:bg-blue-800 focus:z-10 focus:ring-2 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900" do %>
+    <svg class="block m-auto my-2 w-16 md:w-32 h-24 md:h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+    <p class="my-2 text-3xl md:text-2xl lg:text-xl">Controladores</p>
+  <% end %>
 </div>
