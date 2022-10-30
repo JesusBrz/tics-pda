@@ -33,8 +33,24 @@
 /app/assets/builds/*
 !/app/assets/builds/.keep
 
-# Ignore Env variables
-/.env
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
 
-#Ignore node modules
+# Dependency directories
 node_modules/
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
