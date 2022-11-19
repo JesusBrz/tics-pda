@@ -2,7 +2,7 @@
 # exit on error
 set -o errexit
 
-npm install flowbite
+yarn install flowbite
 bundle install
 bundle exec rake tailwindcss:build
 bundle exec rake assets:precompile
