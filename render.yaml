@@ -1,5 +1,5 @@
 type: web
-    name: ticspda
+    name: TicsPDA
     env: ruby
     repo: https://github.com/JesusBrz/tics-pda.git
     scaling:
