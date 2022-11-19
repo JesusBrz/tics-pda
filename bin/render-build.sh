@@ -4,7 +4,7 @@ set -o errexit
 
 npm install flowbite
 bundle install
-bundle exec rails tailwindcss:build
+bundle exec rake tailwindcss:build
 bundle exec rake assets:precompile
 bundle exec rake assets:clean
 bundle exec rake db:migrate
